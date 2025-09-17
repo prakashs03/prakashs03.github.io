@@ -310,6 +310,7 @@ section {
 }
 
 .contact-form input, .contact-form textarea {
+    width: 100%;
     padding: 15px;
     font-family: 'Poppins', sans-serif;
     font-size: 1rem;
@@ -317,6 +318,7 @@ section {
     border-radius: 5px;
     background: var(--grey-color);
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* This is the key fix */
 }
 
 .contact-form input:focus, .contact-form textarea:focus {
@@ -356,7 +358,7 @@ section {
     color: var(--light-grey-color);
 }
 
-/* --- FINAL Responsive Design for Mobile Alignment --- */
+/* --- FINAL Responsive Design with Form Fix --- */
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
@@ -372,10 +374,9 @@ section {
         font-size: 1rem;
     }
     .header-links {
-        flex-direction: column; /* Stack the links vertically */
-        gap: 1.5rem; /* Space between the stacked links */
-        align-items: center; /* Center the links horizontally */
-        width: 100%; /* Ensure the container takes full width */
+        flex-direction: column;
+        gap: 1.5rem;
+        align-items: center;
     }
 
     h2 {
@@ -383,22 +384,22 @@ section {
     }
 
     .qualifications-grid {
-        grid-template-columns: 1fr; /* Stack Education and Skills */
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
     .education-column, .skills-column {
-        text-align: center; /* Center the column content */
+        text-align: center;
     }
     .education-column h3, .skills-column h3 {
-        display: inline-block; /* Ensure the border-bottom fits the text */
+        display: inline-block;
     }
     .skills-list {
-        justify-content: center; /* Center the skill tags */
+        justify-content: center;
     }
 
 
     .form-row {
-        flex-direction: column; /* Stack form inputs */
+        flex-direction: column;
         gap: 0;
     }
     .form-row input {
