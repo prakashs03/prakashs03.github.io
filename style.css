@@ -45,7 +45,7 @@ section {
     padding: 6rem 0;
 }
 
-/* --- Header / Hero Section --- */
+/* --- Header / Hero Section with FINAL Alignment Fixes --- */
 .header {
     background-color: var(--header-bg-color);
     display: flex;
@@ -82,6 +82,7 @@ section {
     align-items: center;
 }
 
+/* "Get In Touch" Button */
 .contact-button {
     background: var(--primary-color);
     color: #fff;
@@ -91,7 +92,7 @@ section {
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 3rem;
+    margin-bottom: 3rem; /* Space between button and links below */
 }
 
 .contact-button:hover {
@@ -99,11 +100,12 @@ section {
     transform: translateY(-2px);
 }
 
+/* "LinkedIn", "GitHub", "Resume" Links Container */
 .header-links {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* This spreads the links out */
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; /* Adjust this width to control how far apart the links are */
     margin: 0 auto;
 }
 
@@ -356,45 +358,44 @@ section {
     color: var(--light-grey-color);
 }
 
-/* --- NEW AND IMPROVED RESPONSIVE DESIGN --- */
+/* --- UPDATED Responsive Design for Mobile Alignment --- */
 @media (max-width: 768px) {
     .container {
-        padding: 0 20px; /* Tighter padding on mobile */
+        padding: 0 20px;
     }
 
-    h1 { font-size: 2.8rem; } /* Smaller h1 on mobile */
-    h2 { font-size: 2.2rem; } /* Smaller h2 on mobile */
-    
     .header {
         padding: 4rem 0;
+    }
+    .header-text h1 {
+        font-size: 2.8rem;
     }
     .header-text p {
         font-size: 1rem;
     }
-    .header-actions {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
+
     .header-links {
         flex-direction: column;
         gap: 1.5rem;
-        width: 100%;
-        justify-content: center;
         align-items: center;
     }
 
+    h2 {
+        font-size: 2.2rem;
+    }
+
     .qualifications-grid {
-        grid-template-columns: 1fr; /* Stack columns on top of each other */
+        grid-template-columns: 1fr;
         gap: 3rem;
     }
 
     .form-row {
-        flex-direction: column; /* Stack form inputs */
+        flex-direction: column;
         gap: 0;
     }
     .form-row input {
         width: 100%;
-        margin-bottom: 20px; /* Add space between stacked inputs */
+        margin-bottom: 20px;
     }
     .contact {
         margin: 4rem 0;
