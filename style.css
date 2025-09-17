@@ -45,7 +45,7 @@ section {
     padding: 6rem 0;
 }
 
-/* --- Header / Hero Section with FINAL Alignment Fixes --- */
+/* --- Header / Hero Section --- */
 .header {
     background-color: var(--header-bg-color);
     display: flex;
@@ -82,7 +82,6 @@ section {
     align-items: center;
 }
 
-/* "Get In Touch" Button */
 .contact-button {
     background: var(--primary-color);
     color: #fff;
@@ -92,7 +91,7 @@ section {
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    margin-bottom: 3rem; /* Space between button and links below */
+    margin-bottom: 3rem;
 }
 
 .contact-button:hover {
@@ -100,12 +99,11 @@ section {
     transform: translateY(-2px);
 }
 
-/* "LinkedIn", "GitHub", "Resume" Links Container */
 .header-links {
     display: flex;
-    justify-content: space-between; /* This spreads the links out */
+    justify-content: space-between;
     width: 100%;
-    max-width: 900px; /* Adjust this width to control how far apart the links are */
+    max-width: 900px;
     margin: 0 auto;
 }
 
@@ -358,14 +356,14 @@ section {
     color: var(--light-grey-color);
 }
 
-/* --- UPDATED Responsive Design for Mobile Alignment --- */
+/* --- FINAL Responsive Design for Mobile Alignment --- */
 @media (max-width: 768px) {
     .container {
         padding: 0 20px;
     }
-
+    
     .header {
-        padding: 4rem 0;
+        padding: 4rem 15px;
     }
     .header-text h1 {
         font-size: 2.8rem;
@@ -373,11 +371,11 @@ section {
     .header-text p {
         font-size: 1rem;
     }
-
     .header-links {
-        flex-direction: column;
-        gap: 1.5rem;
-        align-items: center;
+        flex-direction: column; /* Stack the links vertically */
+        gap: 1.5rem; /* Space between the stacked links */
+        align-items: center; /* Center the links horizontally */
+        width: 100%; /* Ensure the container takes full width */
     }
 
     h2 {
@@ -385,12 +383,22 @@ section {
     }
 
     .qualifications-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Stack Education and Skills */
         gap: 3rem;
     }
+    .education-column, .skills-column {
+        text-align: center; /* Center the column content */
+    }
+    .education-column h3, .skills-column h3 {
+        display: inline-block; /* Ensure the border-bottom fits the text */
+    }
+    .skills-list {
+        justify-content: center; /* Center the skill tags */
+    }
+
 
     .form-row {
-        flex-direction: column;
+        flex-direction: column; /* Stack form inputs */
         gap: 0;
     }
     .form-row input {
