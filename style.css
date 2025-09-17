@@ -397,19 +397,21 @@ section {
         justify-content: center;
     }
 
-
-    .form-row {
-        flex-direction: column;
-        gap: 0;
-    }
-    .form-row input {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+    /* === NEW, SIMPLIFIED FORM STYLES FOR MOBILE === */
     .contact {
         margin: 4rem 0;
-        padding: 3rem 20px;
+        padding: 3rem 15px; /* Reduced padding slightly */
     }
+    .form-row {
+        flex-direction: column; /* Force stack */
+        gap: 20px; /* Add space between stacked inputs */
+        margin-bottom: 0;
+    }
+    .form-row input {
+        width: 100%; /* Ensure it takes full width */
+        margin-bottom: 0; /* Remove old margin */
+    }
+    /* === END OF NEW FORM STYLES === */
 }
 
 
